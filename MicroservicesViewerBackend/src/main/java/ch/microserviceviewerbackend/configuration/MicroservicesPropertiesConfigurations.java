@@ -24,7 +24,11 @@ public class MicroservicesPropertiesConfigurations {
 
     @PostConstruct
     public void init() {
-        if(uris == null) LOGGER.info("In the environment {} yml file, there are no uris defined.", System.getProperty("spring.profiles.active"));
+        if(uris == null) {
+            LOGGER.info("In the environment {}, there are no uris defined.", System.getProperty("spring.profiles.active"));
+        } else {
+            LOGGER.info("In the environment {}, there are {} uris defined.", System.getProperty("spring.profiles.active"), uris.size());
+        }
     }
 
 }
