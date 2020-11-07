@@ -1,0 +1,6 @@
+
+microservices:
+  uris:
+    # Some random Spring-Boot Applications.
+    - http://localhost:8800/actuator/health
+    - http://localhost:8500/actuator/health
