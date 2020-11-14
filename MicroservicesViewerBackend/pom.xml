@@ -33,11 +33,20 @@
     </parent>
 
     <dependencies>
+        <!--Spring Dependencies-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot-starter.version}</version>
         </dependency>
+
+        <!--MySQL Dependencies-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.22</version>
+        </dependency>
+
 
         <!--Testing dependencies-->
         <dependency>
