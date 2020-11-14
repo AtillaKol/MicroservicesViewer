@@ -5,6 +5,8 @@ build:
   description: @project.description@
 
 spring:
+  profiles:
+    active: local
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
