@@ -3,4 +3,4 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:8889/Microservices
+    url: jdbc:mysql://localhost:8889/Microservices?serverTimezone=UTC
