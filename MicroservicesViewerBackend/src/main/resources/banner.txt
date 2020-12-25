@@ -1,9 +1,0 @@
-${AnsiColor.BLUE}+-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+
-${AnsiColor.BRIGHT_GREEN}|M| |i| |c| |r| |o| |s| |e| |r| |v| |i| |c| |e| |V| |i| |e| |w| |e| |r| |B| |a| |c| |k| |e| |n| |d|
-${AnsiColor.BLUE}+-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+ +-+
-
-${AnsiColor.WHITE} Name of the app: ${build.name}
-${AnsiColor.WHITE} Version of the app: ${build.version}
-${AnsiColor.WHITE} Description of the app: ${build.description}
-
-${AnsiColor.DEFAULT}
