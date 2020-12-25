@@ -1,0 +1,19 @@
+${AnsiColor.BLUE},--.   ,--. ,--.                                                           ,--.
+${AnsiColor.BLUE}|   `.'   | `--'  ,---. ,--.--.  ,---.   ,---.   ,---.  ,--.--. ,--.  ,--. `--'  ,---.  ,---.   ,---.
+${AnsiColor.BLUE}|  |'.'|  | ,--. | .--' |  .--' | .-. | (  .-'  | .-. : |  .--'  \  `'  /  ,--. | .--' | .-. : (  .-'
+${AnsiColor.BLUE}|  |   |  | |  | \ `--. |  |    ' '-' ' .-'  `) \   --. |  |      \    /   |  | \ `--. \   --. .-'  `)
+${AnsiColor.BLUE}`--'   `--' `--'  `---' `--'     `---'  `----'   `----' `--'       `--'    `--'  `---'  `----' `----'
+${AnsiColor.GREEN}   ___                        _                            _
+${AnsiColor.GREEN}  | _ )    __ _      __      | |__     ___     _ _      __| |
+${AnsiColor.GREEN}  | _ \   / _` |    / _|     | / /    / -_)   | ' \    / _` |
+${AnsiColor.GREEN}  |___/   \__,_|    \__|_    |_\_\    \___|   |_||_|   \__,_|
+${AnsiColor.GREEN}_|"""""| _|"""""| _|"""""| _|"""""| _|"""""| _|"""""| _|"""""|
+${AnsiColor.GREEN}"`-0-0-' "`-0-0-' "`-0-0-' "`-0-0-' "`-0-0-' "`-0-0-' "`-0-0-'
+
+${AnsiColor.WHITE} Spring-Boot Version: ${spring-boot.formatted-version}
+${AnsiColor.WHITE} Applikationname: ${info.applicationName}
+${AnsiColor.WHITE} Applikationbeschreibung: ${info.applicationDescription}
+
+${AnsiColor.RED} © Kolali, A. 2020
+
+${AnsiColor.DEFAULT}
