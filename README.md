@@ -1,2 +1,2 @@
 # MicroservicesViewer
-View all of your registered Microservices and their current state.
+View all of your registered Microservices and perform different Requests to it.
