@@ -58,7 +58,7 @@ create table if not exists ReqHeaders (
 );
 
 create table if not exists ReqQueryParams (
-    reqQueryParam int not null primary key auto_increment,
+    reqQueryId int not null primary key auto_increment,
     reqQueryKey varchar(100) not null,
     reqQueryValue varchar(100) null,
     requestId int not null,
