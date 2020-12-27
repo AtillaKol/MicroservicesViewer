@@ -26,7 +26,7 @@ create table if not exists HttpStatus (
 
 create table if not exists ResBody (
     resBodyId int not null primary key auto_increment,
-    resBodyResponse TEXT not null
+    resBodyContent TEXT not null
 );
 
 create table if not exists Responses (
@@ -67,7 +67,7 @@ create table if not exists ReqQueryParams (
 
 create table if not exists ReqBody (
     reqBodyId int not null primary key auto_increment,
-    reqBodyResponse TEXT not null,
+    reqBodyContent TEXT not null,
     requestId int not null,
     foreign key(requestId) references Requests(requestId)
 );
