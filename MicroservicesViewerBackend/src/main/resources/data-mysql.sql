@@ -32,9 +32,9 @@ create table if not exists ResBody (
 create table if not exists Responses (
     responseId int not null primary key auto_increment,
     responseDate DATETIME not null,
-    bodyId int not null,
+    resBodyId int not null,
     statusCode int not null,
-    foreign key(bodyId) references ResBody(resBodyId),
+    foreign key(resBodyId) references ResBody(resBodyId),
     foreign key(statusCode) references HttpStatus(statusCode)
 );
 
