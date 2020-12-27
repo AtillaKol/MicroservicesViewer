@@ -1,4 +1,4 @@
-package ch.microservicesviewer.microservicesviewerbackend.configuration.dao.model;
+package ch.microservicesviewer.microservicesviewerbackend.dao.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
