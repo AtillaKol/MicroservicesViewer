@@ -1,4 +1,4 @@
-package ch.microservicesviewer.microservicesviewerbackend.dao.repositories;
+package ch.microservicesviewer.microservicesviewerbackend.dao.repository;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
