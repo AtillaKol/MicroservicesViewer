@@ -5,7 +5,8 @@ create database if not exists MicroservicesViewer;
 use MicroservicesViewer;
 
 create table if not exists Viewers (
-    viewerUsername varchar(20) not null primary key,
+    viewerId int not null primary key auto_increment,
+    viewerUsername varchar(20) unique not null,
     viewerEMail varchar(100) not null,
     viewerPassword varchar(200) not null,
     viewerName varchar(50) not null,
@@ -15,12 +16,13 @@ create table if not exists Viewers (
 create table if not exists Microservices (
     microserviceId int not null primary key auto_increment,
     microserviceURL varchar(200) not null,
-    viewerUsername varchar(20) not null,
-    foreign key(viewerUsername) references Viewers(viewerUsername)
+    viewerId int not null,
+    foreign key(viewerId) references Viewers(viewerId)
 );
 
 create table if not exists HttpStatus (
-    statusCode int not null primary key,
+    statusId int not null primary key auto_increment,
+    statusCode int unique not null,
     statusMessage varchar(150) not null
 );
 
@@ -33,9 +35,9 @@ create table if not exists Responses (
     responseId int not null primary key auto_increment,
     responseDate DATETIME not null,
     resBodyId int not null,
-    statusCode int not null,
+    statusId int not null,
     foreign key(resBodyId) references ResBody(resBodyId),
-    foreign key(statusCode) references HttpStatus(statusCode)
+    foreign key(statusId) references HttpStatus(statusCode)
 );
 
 
@@ -51,18 +53,30 @@ create table if not exists Requests (
 
 create table if not exists ReqHeaders (
     reqHeaderId int not null primary key auto_increment,
-    reqHeaderKey varchar(100) not null,
-    reqHeaderValue varchar(100) null,
+    reqHeaderKey varchar(100) unique not null,
     requestId int not null,
     foreign key(requestId) references Requests(requestId)
 );
 
+create table if not exists ReqHeadersValue (
+    reqHeaderValueId int not null primary key auto_increment,
+    reqHeaderValueValue varchar(100),
+    reqHeaderId int not null,
+    foreign key(reqHeaderId) references ReqHeaders(reqHeaderId)
+);
+
 create table if not exists ReqQueryParams (
     reqQueryId int not null primary key auto_increment,
-    reqQueryKey varchar(100) not null,
-    reqQueryValue varchar(100) null,
+    reqQueryKey varchar(100) unique not null,
     requestId int not null,
     foreign key(requestId) references Requests(requestId)
+);
+
+create table if not exists ReqQueryParamsValue (
+    reqQueryParamValueId int not null primary key auto_increment,
+    reqQueryParamValueValue varchar(100),
+    reqQueryId int not null,
+    foreign key(reqQueryId) references ReqQueryParams(reqQueryId)
 );
 
 create table if not exists ReqBody (
