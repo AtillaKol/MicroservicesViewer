@@ -7,7 +7,7 @@ use MicroservicesViewer;
 create table if not exists Viewers (
     viewerId int not null primary key auto_increment,
     viewerUsername varchar(20) unique not null,
-    viewerEMail varchar(100) not null,
+    viewerEMail varchar(100) unique not null,
     viewerPassword varchar(200) not null,
     viewerName varchar(50) not null,
     viewerSurname varchar(50) not null
