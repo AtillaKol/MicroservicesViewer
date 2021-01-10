@@ -53,29 +53,29 @@ create table if not exists Requests (
 
 create table if not exists ReqHeaders (
     reqHeaderId int not null primary key auto_increment,
-    reqHeaderKey varchar(100) unique not null,
-    requestId int not null,
-    foreign key(requestId) references Requests(requestId)
+    reqHeaderKey varchar(100) unique not null
 );
 
 create table if not exists ReqHeadersValue (
     reqHeaderValueId int not null primary key auto_increment,
     reqHeaderValueValue varchar(100),
+    requestId int not null,
     reqHeaderId int not null,
+    foreign key(requestId) references Requests(requestId),
     foreign key(reqHeaderId) references ReqHeaders(reqHeaderId)
 );
 
 create table if not exists ReqQueryParams (
     reqQueryId int not null primary key auto_increment,
-    reqQueryKey varchar(100) unique not null,
-    requestId int not null,
-    foreign key(requestId) references Requests(requestId)
+    reqQueryKey varchar(100) unique not null
 );
 
 create table if not exists ReqQueryParamsValue (
     reqQueryParamValueId int not null primary key auto_increment,
     reqQueryParamValueValue varchar(100),
+    requestId int not null,
     reqQueryId int not null,
+    foreign key(requestId) references Requests(requestId),
     foreign key(reqQueryId) references ReqQueryParams(reqQueryId)
 );
 
