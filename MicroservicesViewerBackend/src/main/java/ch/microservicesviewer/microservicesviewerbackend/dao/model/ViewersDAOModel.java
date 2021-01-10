@@ -25,10 +25,10 @@ public class ViewersDAOModel {
     @Column(name = "viewerPassword", nullable = false, unique = true)
     private String viewerPassword;
 
-    @Column(name = "viewerName", nullable = false, unique = true)
+    @Column(name = "viewerName", nullable = false)
     private String viewerName;
 
-    @Column(name = "viewerSurname", nullable = false, unique = true)
+    @Column(name = "viewerSurname", nullable = false)
     private String viewerSurname;
 
     @OneToMany(mappedBy = "viewers")
