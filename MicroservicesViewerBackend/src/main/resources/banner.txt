@@ -14,6 +14,6 @@ ${AnsiColor.WHITE} Spring-Boot Version: ${spring-boot.formatted-version}
 ${AnsiColor.WHITE} Applikationname: ${info.applicationName}
 ${AnsiColor.WHITE} Applikationbeschreibung: ${info.applicationDescription}
 
-${AnsiColor.RED} © Kolali, A. 2020
+${AnsiColor.RED} © Kolali, A. 2020-2021
 
 ${AnsiColor.DEFAULT}
