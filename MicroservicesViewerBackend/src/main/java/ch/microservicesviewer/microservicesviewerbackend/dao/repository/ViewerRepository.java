@@ -4,13 +4,16 @@ import ch.microservicesviewer.microservicesviewerbackend.dao.model.ViewersDAOMod
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ViewerRepository extends JpaRepository<ViewersDAOModel, Integer> {
 
     @Override
     List<ViewersDAOModel> findAll();
 
-    ViewersDAOModel findByViewerId(Integer viewerId);
+    Optional<ViewersDAOModel> findByViewerId(Integer viewerId);
+
+    Optional<ViewersDAOModel> findByViewerUsername(String username);
 
     @Override
     <S extends ViewersDAOModel> S save(S viewer);
