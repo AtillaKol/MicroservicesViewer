@@ -22,7 +22,7 @@ public class ViewersDAOModel {
     @Column(name = "viewerEMail", nullable = false, unique = true)
     private String viewerEMail;
 
-    @Column(name = "viewerPassword", nullable = false, unique = true)
+    @Column(name = "viewerPassword", nullable = false)
     private String viewerPassword;
 
     @Column(name = "viewerName", nullable = false)
