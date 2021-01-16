@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: test
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
@@ -8,3 +6,8 @@ spring:
     password: sa
   jpa:
     show-sql: true
+
+microserviceviewerbackend:
+  cors:
+    allowedOrigins: http://localhost:4200, https://localhost:4200
+    allowedMethods: GET, POST, PUT, DELETE
