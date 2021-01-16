@@ -18,4 +18,6 @@ public interface ViewerRepository extends JpaRepository<ViewersDAOModel, Integer
     @Override
     <S extends ViewersDAOModel> S save(S viewer);
 
+    void deleteByViewerUsername(String username);
+
 }

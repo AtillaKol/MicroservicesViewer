@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -57,5 +58,13 @@ public class ViewerRepositoryTest {
         assertEquals("HalloMeinNameKo", kola.get().getViewerPassword());
         assertEquals("Kolali", kola.get().getViewerName());
         assertEquals("Atilla", kola.get().getViewerSurname());
+    }
+
+    @Test
+    @Order(4)
+    @Transactional
+    public void deleteById() {
+        viewerRepository.deleteByViewerUsername("Kola");
+        assertFalse(viewerRepository.findByViewerUsername("Kola").isPresent());
     }
 }
