@@ -2,7 +2,7 @@
 microserviceviewerbackend:
   cors:
     allowedOrigins: http://localhost:4200, https://localhost:4200
-    allowedMethods: GET, POST, PUT, DELETE
+    allowedMethods: GET, POST, PATCH, DELETE
 
 spring:
   datasource:
