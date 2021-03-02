@@ -15,7 +15,7 @@
     <properties>
 
         <!--Zentrales Verwalten der Spring-Boot-Dependencies Versionen-->
-        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <spring-boot.version>2.4.3</spring-boot.version>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.7.RELEASE</version>
+        <version>2.4.3</version>
     </parent>
 
     <dependencies>
